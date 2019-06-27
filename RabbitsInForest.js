@@ -10,9 +10,6 @@ var numRabbits = function (answers) {
         if (!colMap.has(rab)) colMap.set(rab, 1);
         else colMap.set(rab, colMap.get(rab) + 1);
     }
-    for (nums of colMap) {
-        if (nums[0] == 0) res += nums[1];
-        else res += Math.ceil(nums[1] / (nums[0] + 1)) * (nums[0] + 1)
-    }
+    for (nums of colMap) res += Math.ceil(nums[1] / (nums[0] + 1)) * (nums[0] + 1)
     return res;
 };
