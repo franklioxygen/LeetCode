@@ -21,3 +21,20 @@ var rightSideView = function (root) {
     helper(root, 0);
     return res;
 };
+
+var rightSideView = function (root) {
+    if (!root) return [];
+    let res = [];
+    let q = [];
+    q.push(root);
+    while (q.length != 0) {
+        let len = q.length;
+        for (i = 0; i < len; i++) {
+            let curr = q.shift();
+            if (i == len - 1) res.push(curr.val);
+            if (curr.left) q.push(curr.left);
+            if (curr.right) q.push(curr.right)
+        }
+    }
+    return res;
+};
