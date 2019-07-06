@@ -8,7 +8,6 @@ var letterCombinations = function (digits) {
     let table = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"];
     let stack = [];
     let res = [""];
-    let tempRes = [];
     digits = digits.split("");
     for (i = 0; i < digits.length; i++) digits[i] = parseInt(digits[i], 10);
     for (num of digits) stack.push(table[num].split(""));
