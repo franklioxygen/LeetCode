@@ -11,6 +11,7 @@
  * @param {ListNode} headB
  * @return {ListNode}
  */
+
 var getIntersectionNode = function(headA, headB) {
     let numsA = [];
     let numsB = [];
