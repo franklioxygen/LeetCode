@@ -4,11 +4,11 @@
  * @return {number}
  */
 var trailingZeroes = function (n) {
-    let fivePow = 5;
-    let total = 0
-    while (fivePow <= n) {
-        total += Math.floor(n / fivePow);
-        fivePow *= 5;
-    }
-    return total;
+  let fivePow = 5;
+  let total = 0;
+  while (fivePow <= n) {
+    total += Math.floor(n / fivePow);
+    fivePow *= 5;
+  }
+  return total;
 };

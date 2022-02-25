@@ -11,21 +11,21 @@
  * @return {number[]}
  */
 var largestValues = function (root) {
-    if (!root) return [];
-    let res = [];
-    let queue = [];
-    queue.push(root);
-    let max = -Infinity;
-    while (queue.length > 0) {
-        len = queue.length;
-        for (i = 0; i < len; i++) {
-            let node = queue.shift();
-            max = max > node.val ? max : node.val;
-            if (node.left) queue.push(node.left);
-            if (node.right) queue.push(node.right);
-        }
-        res.push(max);
-        max = -Infinity;
+  if (!root) return [];
+  let res = [];
+  let queue = [];
+  queue.push(root);
+  let max = -Infinity;
+  while (queue.length > 0) {
+    len = queue.length;
+    for (i = 0; i < len; i++) {
+      let node = queue.shift();
+      max = max > node.val ? max : node.val;
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
     }
-    return res;
+    res.push(max);
+    max = -Infinity;
+  }
+  return res;
 };

@@ -11,25 +11,25 @@
  * @return {ListNode}
  */
 var mergeKLists = function (lists) {
-    let stack = [];
-    for (list of lists) {
-        while (list) {
-            stack.push(list.val);
-            list = list.next;
-        }
+  let stack = [];
+  for (list of lists) {
+    while (list) {
+      stack.push(list.val);
+      list = list.next;
     }
-    stack.sort((a, b) => {
-        return a - b
-    })
-    let newList = new ListNode();
-    let dummy = newList;
-    while (stack.length != 0) {
-        dummy.val = stack.shift();
-        if (stack.length != 0) {
-            dummy.next = new ListNode();
-            dummy = dummy.next;
-        }
+  }
+  stack.sort((a, b) => {
+    return a - b;
+  });
+  let newList = new ListNode();
+  let dummy = newList;
+  while (stack.length != 0) {
+    dummy.val = stack.shift();
+    if (stack.length != 0) {
+      dummy.next = new ListNode();
+      dummy = dummy.next;
     }
-    if (newList.val == undefined) return null;
-    return newList;
+  }
+  if (newList.val == undefined) return null;
+  return newList;
 };

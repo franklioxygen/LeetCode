@@ -4,8 +4,8 @@
  * @return {number}
  */
 var minMoves = function (nums) {
-    let res = 0;
-    let min = Math.min(...nums);
-    for (i = 0; i < nums.length; i++) res = res + nums[i] - min;
-    return res;
+  let res = 0;
+  let min = Math.min(...nums);
+  for (i = 0; i < nums.length; i++) res = res + nums[i] - min;
+  return res;
 };

@@ -11,15 +11,15 @@
  * @return {TreeNode}
  */
 var convertBST = function (root) {
-    if (!root) return null;
-    let sum = 0;
-    let helper = node => {
-        if (!node) return;
-        if (node.right) helper(node.right);
-        sum += node.val;
-        node.val = sum;
-        if (node.left) helper(node.left);
-    };
-    helper(root);
-    return root;
+  if (!root) return null;
+  let sum = 0;
+  let helper = node => {
+    if (!node) return;
+    if (node.right) helper(node.right);
+    sum += node.val;
+    node.val = sum;
+    if (node.left) helper(node.left);
+  };
+  helper(root);
+  return root;
 };

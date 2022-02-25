@@ -7,14 +7,14 @@
  * @return {number}
  */
 var fourSumCount = function (A, B, C, D) {
-    let hashTable = {};
-    let res = 0;
-    for (a of A)
-        for (b of B)
-            if (hashTable[a + b]) hashTable[a + b] += 1;
-            else hashTable[a + b] = 1;
-    for (c of C)
-        for (d of D)
-            if (hashTable[-c - d]) res += hashTable[-c - d];
-    return res;
+  let hashTable = {};
+  let res = 0;
+  for (a of A)
+    for (b of B)
+      if (hashTable[a + b]) hashTable[a + b] += 1;
+      else hashTable[a + b] = 1;
+  for (c of C)
+    for (d of D)
+      if (hashTable[-c - d]) res += hashTable[-c - d];
+  return res;
 };

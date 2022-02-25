@@ -4,13 +4,13 @@
  * @return {string}
  */
 var convertToTitle = function (n) {
-    let table = "ZABCDEFGHIJKLMNOPQRSTUVWXY";
-    let mod;
-    let res = "";
-    while (n > 0) {
-        mod = n % 26;
-        res = table[mod] + res;
-        n = Math.floor((n - 1) / 26);
-    }
-    return res;
+  let table = 'ZABCDEFGHIJKLMNOPQRSTUVWXY';
+  let mod;
+  let res = '';
+  while (n > 0) {
+    mod = n % 26;
+    res = table[mod] + res;
+    n = Math.floor((n - 1) / 26);
+  }
+  return res;
 };

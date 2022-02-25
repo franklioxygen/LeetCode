@@ -4,7 +4,7 @@
  * @return {number}
  */
 var peakIndexInMountainArray = function (A) {
-    let i = 0;
-    while (A[i] < A[i + 1]) i++;
-    return i;
+  let i = 0;
+  while (A[i] < A[i + 1]) i++;
+  return i;
 };

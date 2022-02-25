@@ -11,15 +11,15 @@
  * @return {number}
  */
 var maxDepth = function (root) {
-    let res = 0;
-    let curr = 1;
-    let helper = (node, curr) => {
-        if (!node) return;
-        if (node.children.length == 0) res = Math.max(res, curr);
-        for (child of node.children) {
-            helper(child, curr + 1);
-        }
+  let res = 0;
+  let curr = 1;
+  let helper = (node, curr) => {
+    if (!node) return;
+    if (node.children.length == 0) res = Math.max(res, curr);
+    for (child of node.children) {
+      helper(child, curr + 1);
     }
-    helper(root, curr);
-    return res;
+  };
+  helper(root, curr);
+  return res;
 };

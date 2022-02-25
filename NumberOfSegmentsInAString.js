@@ -4,7 +4,7 @@
  * @return {number}
  */
 var countSegments = function (s) {
-    s = s.trim()
-    if (s.length === 0) return 0;
-    return s.replace(/\s+/g, ' ').split(' ').length;
+  s = s.trim();
+  if (s.length === 0) return 0;
+  return s.replace(/\s+/g, ' ').split(' ').length;
 };

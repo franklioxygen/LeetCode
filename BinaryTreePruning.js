@@ -11,11 +11,11 @@
  * @return {TreeNode}
  */
 var pruneTree = function (root) {
-    let helper = (node) => {
-        if (!node) return node;
-        node.left = helper(node.left);
-        node.right = helper(node.right);
-        return (node.val == 1 || node.left || node.right) ? node : null;
-    };
-    return helper(root);
+  let helper = (node) => {
+    if (!node) return node;
+    node.left = helper(node.left);
+    node.right = helper(node.right);
+    return (node.val == 1 || node.left || node.right) ? node : null;
+  };
+  return helper(root);
 };

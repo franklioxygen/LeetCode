@@ -13,13 +13,13 @@
  * @return {TreeNode}
  */
 var trimBST = function (root, L, R) {
-    let helper = node => {
-        if (node == null) return null;
-        if (node.val < L) return helper(node.right);
-        if (node.val > R) return helper(node.left);
-        node.left = helper(node.left);
-        node.right = helper(node.right);
-        return node;
-    };
-    return helper(root)
+  let helper = node => {
+    if (node == null) return null;
+    if (node.val < L) return helper(node.right);
+    if (node.val > R) return helper(node.left);
+    node.left = helper(node.left);
+    node.right = helper(node.right);
+    return node;
+  };
+  return helper(root);
 };

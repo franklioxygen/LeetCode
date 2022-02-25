@@ -11,23 +11,23 @@
  * @return {string}
  */
 var tree2str = function (t) {
-    let res = "";
-    let helper = node => {
-        if (!node) return "";
-        let val = node.val;
-        res += val.toString(10);
-        if (node.left) {
-            res += "(";
-            helper(node.left);
-            res += ")"
-        }
-        if (node.right) {
-            if (!node.left) res += "()";
-            res += "(";
-            helper(node.right);
-            res += ")";
-        }
-    };
-    helper(t);
-    return res;
+  let res = '';
+  let helper = node => {
+    if (!node) return '';
+    let val = node.val;
+    res += val.toString(10);
+    if (node.left) {
+      res += '(';
+      helper(node.left);
+      res += ')';
+    }
+    if (node.right) {
+      if (!node.left) res += '()';
+      res += '(';
+      helper(node.right);
+      res += ')';
+    }
+  };
+  helper(t);
+  return res;
 };

@@ -5,8 +5,8 @@
  * @return {boolean}
  */
 var queryString = function (S, N) {
-    for (i = 1; i <= N; i++)
-        if (S.indexOf(i.toString(2)) == -1) return false;
-    return true;
+  for (i = 1; i <= N; i++)
+    if (S.indexOf(i.toString(2)) == -1) return false;
+  return true;
 
 };

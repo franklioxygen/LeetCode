@@ -11,20 +11,20 @@
  * @return {number}
  */
 var sumRootToLeaf = function (root) {
-    let res = [];
-    let helper = (node, curr) => {
-        if (!node) return;
-        curr += node.val;
-        if (!node.left && !node.right) {
-            res.push(curr);
-            return;
-        }
-        helper(node.left, curr);
-        helper(node.right, curr);
-    };
+  let res = [];
+  let helper = (node, curr) => {
+    if (!node) return;
+    curr += node.val;
+    if (!node.left && !node.right) {
+      res.push(curr);
+      return;
+    }
+    helper(node.left, curr);
+    helper(node.right, curr);
+  };
 
-    helper(root, []);
-    return res.reduce((a, b) => {
-        return a += parseInt(b, 2)
-    }, 0);
+  helper(root, []);
+  return res.reduce((a, b) => {
+    return a += parseInt(b, 2);
+  }, 0);
 };

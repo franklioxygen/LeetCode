@@ -4,11 +4,11 @@
  * @return {number}
  */
 var numPairsDivisibleBy60 = function (time) {
-    let res = 0;
-    for (i = 0; i < time.length; i++) {
-        for (j = i + 1; j < time.length; j++) {
-            if ((time[i] + time[j]) % 60 == 0) res++;
-        }
+  let res = 0;
+  for (i = 0; i < time.length; i++) {
+    for (j = i + 1; j < time.length; j++) {
+      if ((time[i] + time[j]) % 60 == 0) res++;
     }
-    return res;
+  }
+  return res;
 };

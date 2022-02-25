@@ -11,13 +11,13 @@
  * @return {boolean}
  */
 var isSymmetric = function (root) {
-    if (root == null) return true;
-    return helper(root.left, root.right);
+  if (root == null) return true;
+  return helper(root.left, root.right);
 };
 
 function helper(left, right) {
-    if (left == null && right == null) return true;
-    if (!left || !right) return false;
-    if (left.val != right.val) return false;
-    return helper(left.left, right.right) && helper(left.right, right.left);
+  if (left == null && right == null) return true;
+  if (!left || !right) return false;
+  if (left.val != right.val) return false;
+  return helper(left.left, right.right) && helper(left.right, right.left);
 }

@@ -4,5 +4,5 @@
  * @return {number}
  */
 var mySqrt = function (x) {
-    return Math.floor(Math.sqrt(x));
+  return Math.floor(Math.sqrt(x));
 };

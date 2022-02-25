@@ -4,9 +4,9 @@
  * @return {boolean}
  */
 var isPowerOfFour = function (num) {
-    while (num != 1) {
-        num /= 4;
-        if (num < 1) return false;
-    }
-    return true;
+  while (num != 1) {
+    num /= 4;
+    if (num < 1) return false;
+  }
+  return true;
 };

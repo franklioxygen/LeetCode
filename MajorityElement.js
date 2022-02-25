@@ -4,9 +4,9 @@
  * @return {number}
  */
 var majorityElement = function (nums) {
-    nums = nums.sort(sortNum);
-    return nums[Math.floor(nums.length / 2)];
+  nums = nums.sort(sortNum);
+  return nums[Math.floor(nums.length / 2)];
 };
 let sortNum = (a, b) => {
-    return a - b;
+  return a - b;
 };

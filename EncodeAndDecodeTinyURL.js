@@ -6,9 +6,9 @@
  * @return {string}
  */
 var encode = function (longUrl) {
-    short = Math.random().toString(36).substring(2);
-    if (!urlSet.has(longUrl)) urlSet.add([longUrl, short])
-    return short;
+  short = Math.random().toString(36).substring(2);
+  if (!urlSet.has(longUrl)) urlSet.add([longUrl, short]);
+  return short;
 };
 
 /**
@@ -18,9 +18,9 @@ var encode = function (longUrl) {
  * @return {string}
  */
 var decode = function (shortUrl) {
-    for (let val of urlSet.keys())
-        if (val[1] == shortUrl) return val[0];
-    return "404";
+  for (let val of urlSet.keys())
+    if (val[1] == shortUrl) return val[0];
+  return '404';
 };
 
 /**

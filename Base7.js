@@ -4,5 +4,5 @@
  * @return {string}
  */
 var convertToBase7 = function (num) {
-    return num.toString(7);
+  return num.toString(7);
 };

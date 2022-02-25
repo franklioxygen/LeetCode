@@ -11,18 +11,18 @@
  * @return {number}
  */
 var findBottomLeftValue = function (root) {
-    let res;
-    let curr = [];
-    let q = [];
-    q.push(root);
-    while (q.length != 0) {
-        let len = q.length;
-        for (i = 0; i < len; i++) {
-            curr = q.shift();
-            if (i == 0) res = curr.val;
-            if (curr.left) q.push(curr.left);
-            if (curr.right) q.push(curr.right);
-        }
+  let res;
+  let curr = [];
+  let q = [];
+  q.push(root);
+  while (q.length != 0) {
+    let len = q.length;
+    for (i = 0; i < len; i++) {
+      curr = q.shift();
+      if (i == 0) res = curr.val;
+      if (curr.left) q.push(curr.left);
+      if (curr.right) q.push(curr.right);
     }
-    return res;
+  }
+  return res;
 };

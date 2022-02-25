@@ -13,9 +13,9 @@
  * @return {TreeNode}
  */
 var lowestCommonAncestor = function (root, p, q) {
-    let helper = node => {
-        if (node.val < p.val) return helper(node.right);
-        if (node.val > q.val) return helper(node.left);
-    };
-    return root;
+  let helper = node => {
+    if (node.val < p.val) return helper(node.right);
+    if (node.val > q.val) return helper(node.left);
+  };
+  return root;
 };

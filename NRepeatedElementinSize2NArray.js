@@ -4,9 +4,9 @@
  * @return {number}
  */
 var repeatedNTimes = function (A) {
-    let s = new Set();
-    for (let i of A) {
-        if (s.has(i)) return i;
-        else s.add(i);
-    }
+  let s = new Set();
+  for (let i of A) {
+    if (s.has(i)) return i;
+    else s.add(i);
+  }
 };

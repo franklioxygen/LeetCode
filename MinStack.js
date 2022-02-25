@@ -3,7 +3,7 @@
  * initialize your data structure here.
  */
 var MinStack = function () {
-    this.stack = [];
+  this.stack = [];
 };
 
 /** 
@@ -11,32 +11,32 @@ var MinStack = function () {
  * @return {void}
  */
 MinStack.prototype.push = function (x) {
-    this.stack.push(x);
+  this.stack.push(x);
 };
 
 /**
  * @return {void}
  */
 MinStack.prototype.pop = function () {
-    let ret = this.stack[this.stack.length - 1];
-    this.stack = this.stack.slice(0, -1);
-    return ret;
+  let ret = this.stack[this.stack.length - 1];
+  this.stack = this.stack.slice(0, -1);
+  return ret;
 };
 
 /**
  * @return {number}
  */
 MinStack.prototype.top = function () {
-    return this.stack[this.stack.length - 1];
+  return this.stack[this.stack.length - 1];
 };
 
 /**
  * @return {number}
  */
 MinStack.prototype.getMin = function () {
-    let min = Infinity;
-    for (num of this.stack) min = min < num ? min : num;
-    return min;
+  let min = Infinity;
+  for (num of this.stack) min = min < num ? min : num;
+  return min;
 };
 
 /** 

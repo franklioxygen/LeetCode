@@ -3,7 +3,7 @@
  * Initialize your data structure here.
  */
 var RandomizedSet = function () {
-    this.set = [];
+  this.set = [];
 };
 
 /**
@@ -12,10 +12,10 @@ var RandomizedSet = function () {
  * @return {boolean}
  */
 RandomizedSet.prototype.insert = function (val) {
-    if (this.set.indexOf(val) != -1) {
-        return false;
-    } else this.set.push(val);
-    return true;
+  if (this.set.indexOf(val) != -1) {
+    return false;
+  } else this.set.push(val);
+  return true;
 };
 
 /**
@@ -24,9 +24,9 @@ RandomizedSet.prototype.insert = function (val) {
  * @return {boolean}
  */
 RandomizedSet.prototype.remove = function (val) {
-    if (this.set.indexOf(val) == -1) return false;
-    else this.set.splice(this.set.indexOf(val), 1);
-    return true;
+  if (this.set.indexOf(val) == -1) return false;
+  else this.set.splice(this.set.indexOf(val), 1);
+  return true;
 };
 
 /**
@@ -34,8 +34,8 @@ RandomizedSet.prototype.remove = function (val) {
  * @return {number}
  */
 RandomizedSet.prototype.getRandom = function () {
-    let pos = Math.floor(Math.random() * this.set.length);
-    return this.set[pos];
+  let pos = Math.floor(Math.random() * this.set.length);
+  return this.set[pos];
 };
 
 /** 

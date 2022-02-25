@@ -15,8 +15,8 @@ var hasGroupsSizeX = function (deck) {
   }
   for (i = 0; i < Array.from(mDeck).length; i++) cardNums.push(Array.from(mDeck)[i][1]);
   cardNums.sort((a, b) => {
-    return a - b
-  })
+    return a - b;
+  });
   min = Math.min(...cardNums);
   if (min == 1) return false;
   for (i = 2; i <= min; i++)

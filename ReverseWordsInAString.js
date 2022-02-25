@@ -4,6 +4,6 @@
  * @return {string}
  */
 var reverseWords = function (s) {
-    s = s.replace(/\s+/g, ' ').trim().split(" ").reverse().join(" ");
-    return s;
+  s = s.replace(/\s+/g, ' ').trim().split(' ').reverse().join(' ');
+  return s;
 };

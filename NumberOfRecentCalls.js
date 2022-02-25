@@ -3,7 +3,7 @@
  * Initialize your data structure here.
  */
 var RecentCounter = function () {
-    this.times = [];
+  this.times = [];
 };
 
 /** 
@@ -11,11 +11,11 @@ var RecentCounter = function () {
  * @return {number}
  */
 RecentCounter.prototype.ping = function (t) {
-    let curr = 0;
-    for (time of this.times)
-        if (time >= t - 3000 && time <= t) curr++;
-    this.times.push(t);
-    return curr + 1
+  let curr = 0;
+  for (time of this.times)
+    if (time >= t - 3000 && time <= t) curr++;
+  this.times.push(t);
+  return curr + 1;
 };
 
 /** 

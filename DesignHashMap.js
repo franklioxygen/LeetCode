@@ -3,7 +3,7 @@
  * Initialize your data structure here.
  */
 var MyHashMap = function () {
-    this.table = [];
+  this.table = [];
 };
 
 /**
@@ -13,12 +13,12 @@ var MyHashMap = function () {
  * @return {void}
  */
 MyHashMap.prototype.put = function (key, value) {
-    for (el of this.table)
-        if (el[0] == key) {
-            el[1] = value;
-            return;
-        }
-    this.table.push([key, value]);
+  for (el of this.table)
+    if (el[0] == key) {
+      el[1] = value;
+      return;
+    }
+  this.table.push([key, value]);
 };
 
 /**
@@ -27,10 +27,10 @@ MyHashMap.prototype.put = function (key, value) {
  * @return {number}
  */
 MyHashMap.prototype.get = function (key) {
-    for (el of this.table) {
-        if (el[0] == key) return el[1];
-    }
-    return -1;
+  for (el of this.table) {
+    if (el[0] == key) return el[1];
+  }
+  return -1;
 };
 
 /**
@@ -39,12 +39,12 @@ MyHashMap.prototype.get = function (key) {
  * @return {void}
  */
 MyHashMap.prototype.remove = function (key) {
-    for (i = 0; i < this.table.length; i++) {
-        if (this.table[i][0] == key) {
-            this.table.splice(i, 1);
-            break;
-        }
+  for (i = 0; i < this.table.length; i++) {
+    if (this.table[i][0] == key) {
+      this.table.splice(i, 1);
+      break;
     }
+  }
 
 };
 

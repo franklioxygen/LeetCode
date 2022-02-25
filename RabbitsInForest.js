@@ -4,12 +4,12 @@
  * @return {number}
  */
 var numRabbits = function (answers) {
-    let colMap = new Map();
-    let res = 0;
-    for (rab of answers) {
-        if (!colMap.has(rab)) colMap.set(rab, 1);
-        else colMap.set(rab, colMap.get(rab) + 1);
-    }
-    for (nums of colMap) res += Math.ceil(nums[1] / (nums[0] + 1)) * (nums[0] + 1)
-    return res;
+  let colMap = new Map();
+  let res = 0;
+  for (rab of answers) {
+    if (!colMap.has(rab)) colMap.set(rab, 1);
+    else colMap.set(rab, colMap.get(rab) + 1);
+  }
+  for (nums of colMap) res += Math.ceil(nums[1] / (nums[0] + 1)) * (nums[0] + 1);
+  return res;
 };

@@ -5,16 +5,16 @@
  * @return {number}
  */
 var largestSumAfterKNegations = function (A, K) {
+  A = A.sort(sortNum);
+  for (i = 0; i < K; i++) {
+    A[0] = -A[0];
     A = A.sort(sortNum);
-    for (i = 0; i < K; i++) {
-        A[0] = -A[0];
-        A = A.sort(sortNum);
-    }
-    return A.reduce(function (acc, curr) {
-        return acc + curr;
-    });
+  }
+  return A.reduce(function (acc, curr) {
+    return acc + curr;
+  });
 };
 
 function sortNum(a, b) {
-    return a - b
+  return a - b;
 }

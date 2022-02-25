@@ -3,7 +3,7 @@
  * Initialize your data structure here.
  */
 var MagicDictionary = function () {
-    this.dicSet = new Set();
+  this.dicSet = new Set();
 };
 
 /**
@@ -12,8 +12,8 @@ var MagicDictionary = function () {
  * @return {void}
  */
 MagicDictionary.prototype.buildDict = function (dict) {
-    for (word of dict)
-        if (!this.dicSet.has(word)) this.dicSet.add(word);
+  for (word of dict)
+    if (!this.dicSet.has(word)) this.dicSet.add(word);
 };
 
 /**
@@ -22,19 +22,19 @@ MagicDictionary.prototype.buildDict = function (dict) {
  * @return {boolean}
  */
 MagicDictionary.prototype.search = function (word) {
-    let possible = [];
-    let oriWord = word;
-    word = word.split("");
-    for (i = 0; i < word.length; i++) {
-        possible.push((word.slice(0, i) + "." + word.slice(i + 1, word.length)).replace(/,/g, ""))
+  let possible = [];
+  let oriWord = word;
+  word = word.split('');
+  for (i = 0; i < word.length; i++) {
+    possible.push((word.slice(0, i) + '.' + word.slice(i + 1, word.length)).replace(/,/g, ''));
+  }
+  for (dicWord of this.dicSet)
+    for (comb of possible) {
+      let regExp = new RegExp(comb, 'g');
+      if (dicWord.match(regExp) && dicWord != oriWord)
+        if (word.length == dicWord.length) return true;
     }
-    for (dicWord of this.dicSet)
-        for (comb of possible) {
-            let regExp = new RegExp(comb, "g");
-            if (dicWord.match(regExp) && dicWord != oriWord)
-                if (word.length == dicWord.length) return true;
-        }
-    return false;
+  return false;
 };
 
 /** 
